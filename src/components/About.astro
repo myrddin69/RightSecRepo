@@ -1,0 +1,170 @@
+---
+const stats = [
+  { value: "10+", label: "Years Experience" },
+  { value: "50+", label: "Secured Clients" },
+  { value: "100%", label: "Mitigation Rate" },
+  { value: "24/7", label: "Incident Support" }
+];
+---
+<section id="about" class="about-section">
+  <div class="container about-container">
+    <div class="about-visual">
+      <div class="grid-stats">
+        {stats.map(stat => (
+          <div class="stat-card">
+            <span class="stat-value text-gradient">{stat.value}</span>
+            <span class="stat-label">{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    <div class="about-content">
+      <span class="badge-tag">About RightSec</span>
+      <h2>Your Trusted Partner in Cyber Defense</h2>
+      <p class="lead-text">
+        At RightSec, we believe that cybersecurity is not just about installing software; it is about building a culture of resilience and designing proactive architectures.
+      </p>
+      <p class="about-body">
+        Founded by security experts with deep industry knowledge, we help businesses navigate the threat landscape. We specialize in identifying security gaps, architecting defense plans, and deploying rapid incident remedies. Whether you require standard compliance testing or emergency system restoration, we ensure your security operations remain unbreakable.
+      </p>
+      
+      <div class="values-list">
+        <div class="value-item">
+          <i class="fa-solid fa-square-check text-accent"></i>
+          <div>
+            <h4>Uncompromised Integrity</h4>
+            <p>We work as an extension of your team, providing transparent findings and honest security insights.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <i class="fa-solid fa-square-check text-accent"></i>
+          <div>
+            <h4>Tailored Strategies</h4>
+            <p>Every business operates differently. We design bespoke defense frameworks matching your exact needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    padding: 8rem 0;
+    position: relative;
+    background-color: var(--color-bg-darkest);
+    border-top: 1px solid rgba(0, 181, 226, 0.05);
+  }
+
+  .about-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  /* Grid of Stat Cards */
+  .grid-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  .stat-card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 181, 226, 0.05);
+  }
+
+  .stat-value {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  /* Right Side Content */
+  .lead-text {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  .about-body {
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .values-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .value-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .value-item i {
+    font-size: 1.25rem;
+    margin-top: 0.2rem;
+  }
+
+  .value-item h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .value-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 900px) {
+    .about-container {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+
+    .about-visual {
+      order: 2;
+    }
+
+    .about-content {
+      order: 1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .grid-stats {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

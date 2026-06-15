@@ -1,0 +1,444 @@
+---
+---
+<section id="contact" class="contact-section">
+  <div class="container contact-container">
+    <div class="contact-info">
+      <span class="badge-tag">Get In Touch</span>
+      <h2>Initiate Defense</h2>
+      <p class="contact-intro">
+        Ready to fortify your systems? Fill out the form to secure a consultation, or connect directly via WhatsApp for urgent inquiries.
+      </p>
+
+      <div class="contact-details">
+        <div class="detail-item">
+          <div class="detail-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>
+            <h5>Email Us</h5>
+            <a href="mailto:info@rightsec.com" class="detail-link">info@rightsec.com</a>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div>
+            <h5>Emergency Response</h5>
+            <span class="detail-link">Available 24/7 for incidents</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick WhatsApp CTA Card -->
+      <div class="whatsapp-cta-card">
+        <div class="wa-card-header">
+          <i class="fa-brands fa-whatsapp wa-icon"></i>
+          <h4>Instant WhatsApp Consult</h4>
+        </div>
+        <p>Chat directly with our security advisor. Click below to start an encrypted session.</p>
+        <a href="https://wa.me/50687079515?text=Hi%20RightSec,%20I'm%20visiting%20your%20website%20and%20would%20like%20to%20discuss%20cybersecurity%20solutions." target="_blank" rel="noopener noreferrer" class="btn btn-primary wa-btn">
+          Open WhatsApp Chat
+        </a>
+      </div>
+    </div>
+
+    <!-- Contact Form Box -->
+    <div class="contact-form-box">
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clientName">Your Name</label>
+            <input type="text" id="clientName" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="clientEmail">Email Address</label>
+            <input type="email" id="clientEmail" name="email" placeholder="john@company.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clientPhone">Phone Number</label>
+            <input type="tel" id="clientPhone" name="phone" placeholder="+1 (555) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label for="serviceType">Required Service</label>
+            <select id="serviceType" name="service" required>
+              <option value="" disabled selected>Select a Service</option>
+              <option value="Penetration Testing">Penetration Testing</option>
+              <option value="Cloud Security">Cloud Security</option>
+              <option value="Incident Response">Incident Response</option>
+              <option value="vCISO & Consulting">vCISO & Consulting</option>
+              <option value="Compliance Audit">Compliance & Auditing</option>
+              <option value="Other Support">Other / Custom Support</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="clientMessage">Message / Brief Description</label>
+          <textarea id="clientMessage" name="message" rows="5" placeholder="Please describe your security requirements..." required></textarea>
+        </div>
+
+        <div class="form-feedback" id="formFeedback"></div>
+
+        <button type="submit" class="btn btn-accent btn-submit" id="submitBtn">
+          <span>Submit Request</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Floating WhatsApp Widget -->
+<a href="https://wa.me/50687079515?text=Hi%20RightSec,%20I'm%20writing%20from%20your%20website%20and%20need%20quick%20assistance%20regarding%20security%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-floating-widget" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+  <span class="tooltip">Chat with us</span>
+</a>
+
+<style>
+  .contact-section {
+    padding: 8rem 0;
+    position: relative;
+    background: linear-gradient(180deg, var(--color-bg-darkest) 0%, var(--color-bg-dark) 100%);
+    border-top: 1px solid rgba(0, 181, 226, 0.05);
+  }
+
+  .contact-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 5rem;
+    align-items: flex-start;
+  }
+
+  .contact-intro {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .detail-item {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+  }
+
+  .detail-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 181, 226, 0.08);
+    border: 1px solid rgba(0, 181, 226, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    font-size: 1.2rem;
+  }
+
+  .detail-item h5 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.25rem;
+  }
+
+  .detail-link {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+  .detail-link:hover {
+    color: var(--color-accent);
+  }
+
+  /* WhatsApp CTA Card */
+  .whatsapp-cta-card {
+    background: rgba(37, 211, 102, 0.05);
+    border: 1px solid rgba(37, 211, 102, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .wa-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: #25D366;
+  }
+
+  .wa-icon {
+    font-size: 1.8rem;
+  }
+
+  .whatsapp-cta-card h4 {
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+
+  .whatsapp-cta-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .wa-btn {
+    width: 100%;
+    background: #25D366;
+    color: #000000;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+  }
+
+  .wa-btn:hover {
+    background: #20ba56;
+    color: #000000;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    transform: translateY(-2px);
+  }
+
+  /* Form Styling */
+  .contact-form-box {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    padding: 3rem;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    letter-spacing: 0.5px;
+  }
+
+  .form-group input, 
+  .form-group select, 
+  .form-group textarea {
+    background: rgba(4, 6, 15, 0.5);
+    border: 1px solid var(--color-border);
+    padding: 0.9rem 1.2rem;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: var(--transition-smooth);
+    width: 100%;
+    outline: none;
+  }
+
+  .form-group input:focus, 
+  .form-group select:focus, 
+  .form-group textarea:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 10px rgba(0, 181, 226, 0.2);
+    background: rgba(4, 6, 15, 0.8);
+  }
+
+  .form-group select option {
+    background: var(--color-bg-darkest);
+    color: #ffffff;
+  }
+
+  .btn-submit {
+    align-self: flex-start;
+    padding: 1rem 2.2rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Feedback state styles */
+  .form-feedback {
+    display: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .form-feedback.success {
+    display: block;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #34d399;
+  }
+
+  .form-feedback.error {
+    display: block;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #f87171;
+  }
+
+  /* Floating WhatsApp Widget */
+  .whatsapp-floating-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25D366;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 99;
+    transition: var(--transition-bounce);
+    animation: pulse-glow 2s infinite alternate;
+  }
+
+  .whatsapp-floating-widget:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #20ba56;
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+  }
+
+  .whatsapp-floating-widget .tooltip {
+    position: absolute;
+    right: 75px;
+    background: var(--color-bg-darkest);
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: var(--transition-smooth);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .whatsapp-floating-widget:hover .tooltip {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 900px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+    
+    .contact-form-box {
+      padding: 2rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .whatsapp-floating-widget {
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      font-size: 1.8rem;
+    }
+    
+    .whatsapp-floating-widget .tooltip {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const contactForm = document.getElementById('contactForm') as HTMLFormElement | null;
+  const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement | null;
+  const formFeedback = document.getElementById('formFeedback') as HTMLDivElement | null;
+
+  contactForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!contactForm || !submitBtn || !formFeedback) return;
+
+    // Reset feedback
+    formFeedback.style.display = 'none';
+    formFeedback.className = 'form-feedback';
+    formFeedback.textContent = '';
+
+    // Disable submit button and add loading status
+    submitBtn.disabled = true;
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = `<span>Sending...</span> <i class="fa-solid fa-circle-notch fa-spin"></i>`;
+
+    const formData = new FormData(contactForm);
+    const payload = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      service: formData.get('service'),
+      message: formData.get('message')
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        formFeedback.textContent = result.message || 'Thank you! Your request has been sent successfully.';
+        formFeedback.classList.add('success');
+        contactForm.reset();
+      } else {
+        throw new Error(result.error || 'Failed to dispatch email. Please try again.');
+      }
+    } catch (err: any) {
+      formFeedback.textContent = err.message || 'A network error occurred. Please try again later or reach out via WhatsApp.';
+      formFeedback.classList.add('error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
+  });
+</script>

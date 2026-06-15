@@ -1,0 +1,245 @@
+---
+---
+<section class="hero-section">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <div class="badge-tag">
+        <i class="fa-solid fa-shield-halved text-accent"></i> Proactive Defense Architecture
+      </div>
+      <h1 class="hero-title">
+        Securing Your Digital Horizon, <span class="text-gradient">The Right Way</span>
+      </h1>
+      <p class="hero-description">
+        RightSec provides industry-leading cybersecurity engineering, penetration testing, and incident response services. We build robust shields around your digital assets so you can innovate with confidence.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-accent">
+          <i class="fa-solid fa-user-shield"></i> Free Consultation
+        </a>
+        <a href="https://wa.me/50687079515?text=Hi%20RightSec,%20I'm%20interested%20in%20your%20cybersecurity%20services%20and%20would%20like%20to%20schedule%20a%20consultation." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <i class="fa-brands fa-whatsapp text-accent"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+    
+    <div class="hero-visual">
+      <div class="tech-card-wrapper">
+        <div class="tech-card-glow"></div>
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <div class="terminal-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="terminal-title">rightsec-shield.sh</span>
+          </div>
+          <div class="tech-card-body">
+            <div class="terminal-line"><span class="term-prompt">rightsec@admin:~#</span> ./run-security-audit.sh</div>
+            <div class="terminal-line term-success"><span class="term-status">[INFO]</span> Initializing vulnerability assessment...</div>
+            <div class="terminal-line"><span class="term-status">[OK]</span> Firewall integrity check completed successfully.</div>
+            <div class="terminal-line"><span class="term-status">[OK]</span> Threat vector databases up to date.</div>
+            <div class="terminal-line term-warning"><span class="term-status">[WARN]</span> 3 outdated packages detected (Patching now).</div>
+            <div class="terminal-line term-success"><span class="term-status">[SECURE]</span> RightSec Shield active. Threat Prevention: 100%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    position: relative;
+    padding: 10rem 0 6rem 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at 10% 20%, rgba(0, 45, 98, 0.05) 0%, transparent 60%);
+  }
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-content {
+    z-index: 2;
+  }
+
+  .hero-title {
+    font-size: 3.8rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+
+  .hero-description {
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  /* Cyber Terminal Graphic */
+  .tech-card-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    perspective: 1000px;
+  }
+
+  .tech-card-glow {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle, rgba(0, 181, 226, 0.2) 0%, transparent 70%);
+    filter: blur(15px);
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 12px;
+  }
+
+  .tech-card {
+    background: rgba(13, 20, 41, 0.8);
+    border: 1px solid rgba(0, 181, 226, 0.2);
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    transform: rotateY(-10deg) rotateX(5deg);
+    transition: var(--transition-bounce);
+  }
+
+  .tech-card:hover {
+    transform: rotateY(0deg) rotateX(0deg) translateY(-5px);
+    border-color: var(--color-accent);
+  }
+
+  .tech-card-header {
+    background: rgba(4, 6, 15, 0.6);
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 181, 226, 0.1);
+  }
+
+  .terminal-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .terminal-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .terminal-dots span:nth-child(1) { background-color: #ef4444; }
+  .terminal-dots span:nth-child(2) { background-color: #f59e0b; }
+  .terminal-dots span:nth-child(3) { background-color: #10b981; }
+
+  .terminal-title {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin-left: 1.5rem;
+    font-weight: 500;
+  }
+
+  .tech-card-body {
+    padding: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #a7f3d0;
+  }
+
+  .terminal-line {
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .term-prompt {
+    color: var(--color-accent);
+  }
+
+  .term-success {
+    color: #34d399;
+  }
+
+  .term-warning {
+    color: #fbbf24;
+  }
+
+  .term-status {
+    font-weight: bold;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+    }
+
+    .hero-description {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+
+    .tech-card {
+      transform: none;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-title {
+      font-size: 2.3rem;
+    }
+    
+    .hero-section {
+      padding-top: 8rem;
+    }
+
+    .hero-actions .btn {
+      width: 100%;
+    }
+  }
+</style>

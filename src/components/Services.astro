@@ -1,0 +1,165 @@
+---
+const services = [
+  {
+    icon: "fa-solid fa-bug-slash",
+    title: "Penetration Testing",
+    description: "Identify and exploit weaknesses in your systems before hackers do. We conduct full network, web application, API, and cloud security testing."
+  },
+  {
+    icon: "fa-solid fa-cloud-shield",
+    title: "Cloud Security",
+    description: "Secure your AWS, Azure, and Google Cloud environments. We design architectures, review IAM configurations, and prevent cloud data leaks."
+  },
+  {
+    icon: "fa-solid fa-user-ninja",
+    title: "Incident Response",
+    description: "Emergency support when you need it most. Our rapid response experts help isolate breaches, eliminate threats, and restore safe operations."
+  },
+  {
+    icon: "fa-solid fa-shield-halved",
+    title: "vCISO & Consulting",
+    description: "Access executive cybersecurity guidance on-demand. We help align your security program with business objectives and manage risk profiles."
+  },
+  {
+    icon: "fa-solid fa-clipboard-check",
+    title: "Compliance & Auditing",
+    description: "Accelerate readiness for compliance standards including ISO 27001, SOC 2, HIPAA, and PCI-DSS through precise gap analysis."
+  },
+  {
+    icon: "fa-solid fa-chalkboard-user",
+    title: "Security Training",
+    description: "Transform your staff into an active defense layer. We provide simulations and interactive security awareness training to stop phishing."
+  }
+];
+---
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge-tag">Expert Capabilities</span>
+      <h2>Our Security Services</h2>
+      <p>RightSec offers premium end-to-end cybersecurity solutions tailored to protect your intellectual property, client data, and systems integrity.</p>
+    </div>
+
+    <div class="services-grid">
+      {services.map(service => (
+        <div class="service-card">
+          <div class="icon-box">
+            <i class={service.icon}></i>
+          </div>
+          <h3 class="service-title">{service.title}</h3>
+          <p class="service-description">{service.description}</p>
+          <a href="#contact" class="service-link">
+            Request Service <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-section {
+    padding: 8rem 0;
+    position: relative;
+    background: linear-gradient(180deg, var(--color-bg-dark) 0%, var(--color-bg-darkest) 100%);
+    border-top: 1px solid rgba(0, 181, 226, 0.05);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    transition: var(--transition-bounce);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 181, 226, 0.05) 0%, transparent 100%);
+    opacity: 0;
+    transition: var(--transition-smooth);
+    pointer-events: none;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-border-hover);
+    background: var(--color-bg-card-hover);
+    box-shadow: 0 10px 30px rgba(0, 181, 226, 0.08);
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
+
+  .icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: rgba(0, 181, 226, 0.1);
+    border: 1px solid rgba(0, 181, 226, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    transition: var(--transition-smooth);
+  }
+
+  .service-card:hover .icon-box {
+    background: var(--color-accent);
+    color: var(--color-bg-darkest);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 181, 226, 0.4);
+  }
+
+  .service-title {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .service-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+  }
+
+  .service-link i {
+    transition: var(--transition-smooth);
+  }
+
+  .service-card:hover .service-link i {
+    transform: translateX(5px);
+  }
+</style>
