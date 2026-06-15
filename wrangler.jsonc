@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "rightsec-website",
+  "name": "rightsec",
   "compatibility_date": "2026-06-15",
   "compatibility_flags": [
     "nodejs_compat"
